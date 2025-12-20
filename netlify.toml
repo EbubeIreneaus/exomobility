@@ -1,6 +1,6 @@
 [build]
   command = "quasar build -m ssr"
-  publish = "dist/ssr/www"
+  publish = "dist/ssr"
 
 [functions]
   directory = "dist/ssr/functions"
