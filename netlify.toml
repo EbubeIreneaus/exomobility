@@ -1,6 +1,6 @@
 [build]
 base = '.'
-publish = 'dist/ssr/client'
+publish = 'dist/ssr'
 command = 'quasar build -m ssr'
 
 [functions]
