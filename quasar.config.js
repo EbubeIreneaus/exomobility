@@ -64,7 +64,7 @@ module.exports = configure(function (ctx) {
       // publicPath: '/',
       // analyze: true,
       env: {
-        API: ctx.dev ? 'http://127.0.0.1:8000/api/': 'https://exomobility.vercel.app/api/'
+        API: ctx.dev ? 'http://127.0.0.1:8000/api/': 'https://exomobilitystore.vercel.app/api/'
       },
       // rawDefine: {}
       // ignorePublicFolder: true,
