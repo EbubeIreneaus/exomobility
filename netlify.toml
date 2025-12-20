@@ -1,9 +1,9 @@
-[build]
-  command = "quasar build -m ssr"
-  publish = "dist/ssr"
 
-[functions]
-  directory = "dist/ssr/functions"
+[build]
+  base = '.'
+  publish = '.netlify/v1/functions/index/client'
+  command = 'quasar build -m ssr'
 
 [build.environment]
   NODE_OPTIONS = "--max-old-space-size=4096"
+    
