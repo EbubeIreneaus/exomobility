@@ -16,6 +16,7 @@ export const useProductStore = defineStore('products', () => {
       fetch(`${process.env.API}faqs/`).then(res => res.json()),
 
     ]);
+
     products.value = _products
     categories.value = _categories
     faqs.value = _faqs
