@@ -25,7 +25,7 @@ const cart = useCartStore();
         class="hover:tw-text-slate-500"
         :to="`/product/${product.slug}`"
       >
-        <div class="text-body1 text-weight-bold tw-text-slate-950">
+        <div class="text-body1 tw-line-clamp-2 text-weight-bold tw-text-slate-950">
           {{ product.name }}
         </div>
         <div class="tw-line-clamp-2 tw-text-sm tw-font-medium">

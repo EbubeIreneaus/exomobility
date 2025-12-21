@@ -78,7 +78,7 @@ const carting = ref(1);
 
               <div class="tw-mb-5 tw-relative">
                 <span
-                  class="text-body1 tw-text-balance tw-font-semibold"
+                  class="text-body1 tw-text-balance tw-font-semibold tw-whitespace-pre-line"
                   :class="{
                     'tw-line-clamp-3 tw-text-ellipsis': !toggleSeemore,
                   }"
