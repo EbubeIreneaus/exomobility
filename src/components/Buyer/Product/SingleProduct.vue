@@ -12,10 +12,10 @@ const cart = useCartStore();
 
 <template>
   <q-card flat class="tw-bg-blue-100 tw-rounded-lg" >
-    <q-card-section class="tw-overflow-hidden tw-w-[200px] tw-mx-auto">
+    <q-card-section class="tw-overflow-hidden tw-w-[150px] tw-border tw-mx-auto tw-p-0 tw-py-3">
       <img
         :src="product.images[0].image"
-        class="tw-w-[200px] tw-aspect-square tw-mx-auto tw-rounded-lg tw-object-cover hover:tw-scale-125 tw-transition-all tw-ease-linear tw-duration-300"
+        class="tw-w-full tw-mx-auto tw-aspect-square  tw-rounded-lg tw-object-cover hover:tw-scale-125 tw-transition-all tw-ease-linear tw-duration-300"
       />
 
     </q-card-section>
