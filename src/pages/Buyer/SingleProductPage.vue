@@ -7,8 +7,10 @@ import ProductImageSlide from 'src/components/Buyer/Product/ProductImageSlide.vu
 import { useCartStore } from 'src/stores/cart';
 import { useProductStore } from 'src/stores/product';
 import SingleProduct from 'src/components/Buyer/Product/SingleProduct.vue';
+import { useRouter } from 'vue-router';
 
 const toggleSeemore = ref(false);
+const router = useRouter()
 
 defineOptions({
   async preFetch({ store }) {
@@ -87,14 +89,17 @@ const carting = ref(1);
                 </span>
                 <button
                   @click="toggleSeemore = !toggleSeemore"
-                  class="tw-inline tw-ml-1  text-body2"
+                  class="tw-inline tw-ml-1 text-body2"
                 >
                   {{ toggleSeemore ? 'see less' : 'see more' }}
                 </button>
               </div>
 
               <div class="tw-flex tw-flex-wrap tw-gap-5">
-                <div class="tw-flex tw-border tw-w-fit">
+                <div
+                  class="tw-flex tw-border tw-w-fit"
+                  v-if="!cart.has(product)"
+                >
                   <q-btn
                     icon="add"
                     unelevated
@@ -133,10 +138,35 @@ const carting = ref(1);
                   />
                 </div>
               </div>
+
+              <div
+                class="tw-mt-4 tw-flex tw-gap-3 tw-flex-wrap"
+                v-if="cart.has(product)"
+              >
+                <q-btn
+                  icon="fa-solid fa-arrow-left"
+                  size="md"
+                  @click="router.back()"
+                  unelevated
+                  color="blue-10"
+                  label="continue shopping"
+                  no-caps
+                />
+                <q-btn
+                  icon="add_shopping_cart"
+                  to="/cart"
+                  size="md"
+                  unelevated
+                  color="blue-5"
+                  label="checkout"
+                  no-caps
+                />
+              </div>
             </div>
 
             <q-separator class="tw-my-5" />
             <div>
+              <h3 class="tw-font-extrabold tw-uppercase tw-mb-3">Specifications</h3>
               <q-list>
                 <q-item v-for="spec in product.specifications" :key="spec.name">
                   <q-item-section class="text-weight-bold tw-uppercase">{{
