@@ -1,7 +1,9 @@
 <script lang="ts" setup>
   import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { useProductStore } from 'src/stores/product';
   const router = useRouter()
+  const store = useProductStore()
 
   const search = ref('')
 
@@ -25,7 +27,15 @@ import { useRouter } from 'vue-router';
           square
           stretch
           dropdown-icon="keyboard_arrow_down"
-        ></q-btn-dropdown>
+        >
+      <q-list>
+        <q-item :to="`/cat/${cat.slug}`" v-for="cat in store.categories" :key="cat.slug">
+          <q-item-section>
+            {{ cat.name }}
+          </q-item-section>
+        </q-item>
+      </q-list>
+      </q-btn-dropdown>
       </div>
 
       <div class="lg:tw-col-span-6 tw-flex tw-items-center">

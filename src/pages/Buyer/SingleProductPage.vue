@@ -8,6 +8,8 @@ import { useCartStore } from 'src/stores/cart';
 import { useProductStore } from 'src/stores/product';
 import SingleProduct from 'src/components/Buyer/Product/SingleProduct.vue';
 
+const toggleSeemore = ref(false);
+
 defineOptions({
   async preFetch({ store }) {
     let s = useProductStore(store);
@@ -23,8 +25,11 @@ const product = computed<ProductType>(
   () => store.products?.find((p) => p.slug == slug) || ({} as ProductType)
 );
 
-const related = computed<ProductType[]>(() =>
-  store.products?.filter((p) => p.category.name == product.value.category.name) || ([] as ProductType[])
+const related = computed<ProductType[]>(
+  () =>
+    store.products?.filter(
+      (p) => p.category.name == product.value.category.name
+    ) || ([] as ProductType[])
 );
 
 const carting = ref(1);
@@ -71,10 +76,21 @@ const carting = ref(1);
                 ></span>
               </div>
 
-              <div class="tw-mb-5">
-                <div class="text-body1 tw-text-balance tw-font-semibold">
+              <div class="tw-mb-5 tw-relative">
+                <span
+                  class="text-body1 tw-text-balance tw-font-semibold"
+                  :class="{
+                    'tw-line-clamp-3 tw-text-ellipsis': !toggleSeemore,
+                  }"
+                >
                   {{ product.description }}
-                </div>
+                </span>
+                <button
+                  @click="toggleSeemore = !toggleSeemore"
+                  class="tw-inline tw-ml-1  text-body2"
+                >
+                  {{ toggleSeemore ? 'see less' : 'see more' }}
+                </button>
               </div>
 
               <div class="tw-flex tw-flex-wrap tw-gap-5">
@@ -107,7 +123,7 @@ const carting = ref(1);
                     "
                     class="tw-h-full"
                     unelevated
-                    color="green-5"
+                    color="blue-5"
                     @click="
                       () =>
                         cart.has(product)
@@ -142,8 +158,14 @@ const carting = ref(1);
         Related Products
       </h2>
       <q-card-section>
-        <div class="tw-grid lg:tw-grid-cols-5 md:tw-grid-cols-4 sm:tw-grid-cols-3 tw-grid-cols-2 tw-gap-2 md:tw-gap-5">
-          <SingleProduct :product="product" v-for="product in related"  :key="product.slug"/>
+        <div
+          class="tw-grid lg:tw-grid-cols-5 md:tw-grid-cols-4 sm:tw-grid-cols-3 tw-grid-cols-2 tw-gap-2 md:tw-gap-5"
+        >
+          <SingleProduct
+            :product="product"
+            v-for="product in related"
+            :key="product.slug"
+          />
         </div>
       </q-card-section>
     </q-card>

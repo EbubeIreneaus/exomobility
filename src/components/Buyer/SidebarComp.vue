@@ -15,20 +15,11 @@ const cart = computed(() => useCartStore());
 
     <div class="tw-my-7">
       <div class="*:tw-inline-block tw-my-1">
-        <q-btn
-          icon="favorite"
-          flat
-          size="sm"
-          :ripple="false"
-          class="!tw-text-black focus:!tw-bg-transparent"
-        >
-          <q-badge label="0" class="btn" floating rounded></q-badge>
-        </q-btn>
 
         <q-btn
-          icon="shopping_bag"
+          icon="add_shopping_cart"
           flat
-          size="sm"
+          size="lg"
           :ripple="false"
           class="!tw-text-black focus:!tw-bg-transparent"
           to="/cart"

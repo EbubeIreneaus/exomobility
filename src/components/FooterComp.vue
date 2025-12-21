@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { route } from 'quasar/wrappers';
-
 </script>
 
 <template>
@@ -9,13 +7,12 @@ import { route } from 'quasar/wrappers';
       class="container tw-grid lg:tw-grid-cols-3 tw-gap-4 tw-justify-between tw-py-10 tw-mx-auto tw-space-y-8 lg:tw-space-y-0"
     >
       <div class="lg:tw-col-span-1">
-        <a
-          rel="noopener noreferrer"
-          href="#"
+        <router-link
+          to="/"
           class="tw-flex  tw-space-x-3 lg:tw-justify-start"
         >
           <q-img src="logo-tr.png" class="tw-w-48" />
-        </a>
+        </router-link>
         <div class="tw-my-5 text-body2 tw-text-balance">
           <!-- tagline here -->
         </div>

@@ -40,7 +40,9 @@
         <div
           class="container tw-flex tw-justify-between tw-items-center tw-mx-auto lg:tw-py-4 tw-p-4"
         >
-          <div class="tw-w-24"><q-img src="/logo-tr.png" width="180px" /></div>
+          <div class="tw-w-24">
+            <router-link to="/"><q-img src="/logo-tr.png" width="180px" /></router-link>
+          </div>
 
           <ul class="*:tw-inline *:tw-px-4 tw-hidden lg:tw-block">
             <li

@@ -56,7 +56,7 @@ const slideTo = (index: number) => {
         >
           <img
             :src="img.image"
-            class="tw-aspect-video tw-rounded-lg"
+            class="tw-aspect-square tw-max-h-[300px] tw-mx-auto tw-rounded-lg"
           />
         </swiper-slide>
       </swiper-container>
@@ -67,9 +67,9 @@ const slideTo = (index: number) => {
     <div class="tw-mx-auto">
       <swiper-container
       class="tw-px-5"
-      :slides-per-view="5"
+      :slides-per-view="6"
       gap="1"
-      :space-between="10"
+      :space-between="6"
       :autoplay="true"
       :speed="500"
     >
@@ -86,11 +86,11 @@ const slideTo = (index: number) => {
       <swiper-slide
         v-for="(img, index) in images"
         :key="index"
-        class="tw-border"
+        class=""
       >
         <img
           :src="img.image"
-          class="t-w-[80px] tw-rounded-lg"
+          class="tw-max-h-[70px] tw-aspect-square tw-mx-auto tw-rounded-lg"
           @click="slideTo(index+1)"
         />
       </swiper-slide>
