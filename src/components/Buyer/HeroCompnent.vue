@@ -49,12 +49,12 @@ import { useRouter } from 'vue-router';
         class="tw-py-2 lg:tw-col-span-3 tw-flex tw-justify-normal md:tw-justify-end lg:tw-justify-normal tw-gap-4"
       >
         <div class="tw-w-fit tw-py-3 tw-px-4 tw-rounded-full tw-bg-slate-50">
-          <q-icon name="phone" />
+          <q-icon name="fa-brands fa-whatsapp" size="30px" color="green-10" />
         </div>
-        <div>
+        <a href="https://wa.me/message/BO4BCSL3PTI6B1" class="tw-block hover:tw-text-blue-900">
           <h5 class="text-weight-bold">+852 7049 8945</h5>
-          <div>24/7 customer support</div>
-        </div>
+          <div class="">24/7 whatsapp support</div>
+        </a>
       </div>
     </div>
   </section>

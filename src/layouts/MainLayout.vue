@@ -14,17 +14,14 @@
 
           <div class="tw-flex tw-justify-between tw-gap-5">
             <ul class="tw-flex tw-gap-4">
-              <a href=""
+              <a href="https://www.facebook.com/share/1MTAQWaHwd/?mibextid=wwXIfr"
                 ><li><q-icon name="fa-brands fa-facebook" /></li
               ></a>
-              <a href=""
+              <a href="https://www.tiktok.com/@exomobilitystore?_r=1&_t=ZS-92OcZqYixwT"
                 ><li><q-icon name="fa-brands fa-tiktok" /></li
               ></a>
-              <a href=""
+              <a href="https://www.instagram.com/exomobility?igsh=aHRraGZiaDc2aWI1&utm_source=qr"
                 ><li><q-icon name="fa-brands fa-instagram" /></li
-              ></a>
-              <a href=""
-                ><li><q-icon name="fa-brands fa-linkedin" /></li
               ></a>
             </ul>
             <!-- <q-separator vertical />

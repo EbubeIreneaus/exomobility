@@ -1,4 +1,7 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { route } from 'quasar/wrappers';
+
+</script>
 
 <template>
   <footer class="tw-px-4 tw-divide-y">
@@ -14,10 +17,7 @@
           <q-img src="logo-tr.png" class="tw-w-48" />
         </a>
         <div class="tw-my-5 text-body2 tw-text-balance">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, rem
-          quae reiciendis corrupti odit dignissimos! Blanditiis illum debitis
-          delectus, incidunt harum accusantium quae at rerum minima fugiat,
-          praesentium beatae magni.
+          <!-- tagline here -->
         </div>
       </div>
 
@@ -29,10 +29,10 @@
             Product
           </h5>
           <ul class="tw-space-y-1 *:tw-font-semibold">
-            <li class="hover:!tw-text-amber-400"><a rel="noopener noreferrer" href="#">Home</a></li>
-            <li class="hover:!tw-text-amber-400"><a rel="noopener noreferrer" href="#">Shop</a></li>
-            <li class="hover:!tw-text-amber-400"><a rel="noopener noreferrer" href="#">About</a></li>
-            <li class="hover:!tw-text-amber-400"><a rel="noopener noreferrer" href="#">Contact us</a></li>
+            <li class="hover:!tw-text-amber-400"><router-link to="/">Home</router-link></li>
+            <li class="hover:!tw-text-amber-400"><router-link to="/shop">Shop</router-link></li>
+            <li class="hover:!tw-text-amber-400"><router-link to="/about">About</router-link></li>
+            <li class="hover:!tw-text-amber-400"><router-link to="/contact">Contact us</router-link></li>
           </ul>
         </div>
         <div class="tw-space-y-3">
@@ -57,9 +57,10 @@
           <div class="tw-flex tw-justify-start tw-space-x-3">
             <a
               rel="noopener noreferrer"
-              href="#"
+              href="https://www.facebook.com/share/1MTAQWaHwd/?mibextid=wwXIfr"
               title="Facebook"
               class="tw-flex tw-items-center tw-p-1"
+              target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,25 +75,18 @@
             </a>
             <a
               rel="noopener noreferrer"
-              href="#"
-              title="Twitter"
+              href="https://www.tiktok.com/@exomobilitystore?_r=1&_t=ZS-92OcZqYixwT"
+              title="tiktok"
               class="tw-flex tw-items-center tw-p-1"
             >
-              <svg
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                class="tw-w-5 tw-h-5 tw-fill-current"
-              >
-                <path
-                  d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z"
-                ></path>
-              </svg>
+              <q-icon name="fa-brands fa-tiktok" />
             </a>
             <a
               rel="noopener noreferrer"
-              href="#"
+              href="https://www.instagram.com/exomobility?igsh=aHRraGZiaDc2aWI1&utm_source=qr"
               title="Instagram"
               class="tw-flex tw-items-center tw-p-1"
+              target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
