@@ -105,6 +105,15 @@ import { route } from 'quasar/wrappers';
                 ></path>
               </svg>
             </a>
+            <a
+              rel="noopener noreferrer"
+              href="https://youtube.com/@exomobilitystore"
+              title="Instagram"
+              class="tw-flex tw-items-center tw-p-1"
+              target="_blank"
+            >
+              <q-icon name="fa-brands fa-youtube" />
+            </a>
           </div>
         </div>
       </div>

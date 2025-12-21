@@ -61,15 +61,16 @@ const cart = computed(() => useCartStore());
 
     <div class="tw-flex tw-gap-5 tw-px-3 tw-mb-5">
       <a href="https://www.facebook.com/share/1MTAQWaHwd/?mibextid=wwXIfr"
-        ><li><q-icon name="fa-brands fa-facebook" /></li
-      ></a>
+        ><q-icon name="fa-brands fa-facebook"
+      /></a>
       <a href="https://www.tiktok.com/@exomobilitystore?_r=1&_t=ZS-92OcZqYixwT"
-        ><li><q-icon name="fa-brands fa-tiktok" /></li
-      ></a>
+        ><q-icon name="fa-brands fa-tiktok"
+      /></a>
       <a
         href="https://www.instagram.com/exomobility?igsh=aHRraGZiaDc2aWI1&utm_source=qr"
-        ><li><q-icon name="fa-brands fa-instagram" /></li
-      ></a>
+        ><q-icon name="fa-brands fa-instagram"
+      /></a>
+
       <a href="https://youtube.com/@exomobilitystore"
         ><q-icon name="fa-brands fa-youtube"
       /></a>
