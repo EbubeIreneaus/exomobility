@@ -95,10 +95,10 @@ const carting = ref(1);
                 </button>
               </div>
 
-              <div class="tw-flex tw-flex-wrap tw-gap-5">
+              <div class="tw-flex tw-flex-wrap tw-gap-5" v-if="!cart.has(product)">
                 <div
                   class="tw-flex tw-border tw-w-fit"
-                  v-if="!cart.has(product)"
+                
                 >
                   <q-btn
                     icon="add"
