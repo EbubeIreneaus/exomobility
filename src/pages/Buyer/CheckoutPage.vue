@@ -26,6 +26,7 @@ const form = reactive({
   country: '',
   city: '',
   address: '',
+  phone: ''
 });
 
 function submit() {
@@ -122,6 +123,20 @@ function submit() {
               outlined
               dense
               placeholder="New York"
+              class="tw-mt-1"
+              required
+            />
+          </div>
+
+          <div>
+            <label class="tw-text-sm tw-font-medium tw-text-gray-700">
+              Phone
+            </label>
+            <q-input
+              v-model="form.phone"
+              outlined
+              dense
+              placeholder="+1 234 567 89"
               class="tw-mt-1"
               required
             />

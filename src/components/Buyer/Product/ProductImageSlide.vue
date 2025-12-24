@@ -40,9 +40,9 @@ const slideTo = (index: number) => {
 
       <swiper-slide
           class=""
+          v-if="product.video"
         >
           <video
-            v-if="product.video"
             :src="product.video"
             class="tw-aspect-video tw-rounded-lg"
             controls
