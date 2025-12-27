@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import router from 'src/router';
+
 </script>
 
 <template>
@@ -37,8 +39,8 @@
             Company
           </h5>
           <ul class="tw-space-y-1 *:tw-font-semibold">
-            <li><a rel="noopener noreferrer" href="#">Privacy</a></li>
-            <li><a rel="noopener noreferrer" href="#">Terms of Service</a></li>
+            <li><router-link to="/privacy-policy">Privacy & Policy</router-link></li>
+            <li><router-link to="/tos">Terms of Service</router-link></li>
           </ul>
         </div>
         <div class="tw-space-y-3">

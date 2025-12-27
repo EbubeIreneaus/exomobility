@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useRoute } from 'vue-router';
 import BreadCrumbs from 'src/components/Buyer/BreadCrumbs.vue';
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { ProductType } from 'app/types/product';
 import ProductImageSlide from 'src/components/Buyer/Product/ProductImageSlide.vue';
 import { useCartStore } from 'src/stores/cart';
@@ -21,10 +21,11 @@ defineOptions({
 
 const store = useProductStore();
 const cart = useCartStore();
-const { slug } = useRoute().params;
+const route = useRoute()
+const slug = computed(() => route.params.slug)
 
 const product = computed<ProductType>(
-  () => store.products?.find((p) => p.slug == slug) || ({} as ProductType)
+  () => store.products?.find((p) => p.slug == slug.value) || ({} as ProductType)
 );
 
 const related = computed<ProductType[]>(
@@ -35,6 +36,10 @@ const related = computed<ProductType[]>(
 );
 
 const carting = ref(1);
+
+watch(slug, () => {
+  carting.value = 1
+})
 </script>
 
 <template>
