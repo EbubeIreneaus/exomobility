@@ -52,7 +52,7 @@ watch(slug, () => {
           class="tw-grid lg:tw-grid-cols-2 tw-grid-cols-1 tw-gap-y-6 container tw-mx-auto tw-my-6"
         >
           <div class="">
-            <ProductImageSlide :product="product" />
+            <ProductImageSlide :product="product" :key="product.slug" />
           </div>
           <div class="tw-my-10 md:tw-px-5">
             <div class="">
