@@ -7,9 +7,11 @@ export const useProductStore = defineStore('products', () => {
   const categories = ref<null | {name: string, slug: string}[]>(null)
   const faqs = ref<{id:number, question: string, answer: string}[] | null>(null)
   const isLoaded = ref(false)
+  const isLoading = ref(false)
 
   async function fetchAllProduct(){
     if(isLoaded.value) return
+      isLoading.value = true
       const [_products, _categories, _faqs] = await Promise.all([
       fetch(`${process.env.API}products/all`).then(res => res.json()),
       fetch(`${process.env.API}products/categories`).then(res => res.json()),
@@ -20,6 +22,7 @@ export const useProductStore = defineStore('products', () => {
     products.value = _products
     categories.value = _categories
     faqs.value = _faqs
+    isLoading.value = false
     isLoaded.value = true
   }
 
@@ -27,6 +30,7 @@ export const useProductStore = defineStore('products', () => {
     products,
     categories,
     fetchAllProduct,
-    faqs
+    faqs,
+    isLoading
   };
 });

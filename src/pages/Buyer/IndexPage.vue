@@ -15,7 +15,7 @@ defineOptions({
 
 const store = useProductStore()
 
-const featured = computed(()=> store.products?.filter(p => p.feature).slice(0, 28))
+const featured = computed(()=> store.products?.filter(p => p.feature).slice(0, 50))
 
 // const latest_slide_ref: any = ref(null);
 
